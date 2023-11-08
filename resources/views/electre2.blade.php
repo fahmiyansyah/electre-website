@@ -2,6 +2,70 @@
 <html>
 <head>
     <title>Decision Support System</title>
+    <style>
+        /* CSS untuk hiasan dan warna biru muda */
+        body {
+            background-color: #f0f0f0;
+            font-family: Arial, sans-serif;
+        }
+
+        h1 {
+            text-align: center; /* Teks judul di tengah halaman */
+            color: #007acc; /* Warna biru muda */
+        }
+
+        h2 {
+            color: #007acc; /* Warna biru muda */
+        }
+
+        button {
+            background-color: #007acc; /* Warna biru muda */
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            margin: 10px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #005b99; /* Warna biru yang sedikit lebih gelap saat hover */
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            max-width: 800px;
+            margin: 10px;
+        }
+
+        table, th, td {
+            border: 1px solid #007acc; /* Warna garis tepi biru muda */
+        }
+
+        th, td {
+            padding: 8px;
+            text-align: center;
+        }
+
+        th {
+            background-color: #007acc; /* Warna latar belakang header biru muda */
+            color: #fff;
+        }
+
+        form {
+            margin: 10px;
+        }
+
+        label {
+            font-weight: bold;
+        }
+
+        input {
+            padding: 5px;
+            margin: 5px;
+        }
+
+    </style>
 </head>
 <body>
     <h1>Decision Support System</h1>

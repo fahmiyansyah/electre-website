@@ -1,6 +1,123 @@
 <!DOCTYPE html>
 <html>
 <head>
+<title>Decision Support System</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <style>
+        body {
+            background-color: #f0f8ff;
+        }
+
+        .header {
+            background-color: #87cefa;
+            padding: 20px;
+            text-align: center;
+        }
+
+        h1,
+        h2 {
+            color: #191970;
+            text-align: center;
+            padding-top: 20px;
+        }
+
+        h3 {
+            color: #191970;
+            text-align: center;
+            padding-top: 20px; 
+        }
+
+        form {
+            margin: 20px auto;
+            width: 50%;
+            background-color: #ffffff;
+            padding: 20px;
+            border: 1px solid #191970;
+            border-radius: 5px;
+        }
+
+        form label {
+            display: block;
+            margin-top: 10px;
+            color: #191970;
+        }
+
+        form input {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            margin-bottom: 15px;
+            border-radius: 5px;
+            border: 1px solid #191970;
+        }
+
+        button[type="submit"] {
+            display: block;
+            width: 100%;
+            background-color: #191970;
+            color: #ffffff;
+            border: none;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .alternatives-section,
+        .criteria-section {
+            margin: 20px auto;
+            width: 50%;
+            background-color: #ffffff;
+            padding: 20px;
+            border: 1px solid #191970;
+            border-radius: 5px;
+        }
+
+        .alternatives-section label,
+        .criteria-section label {
+            display: block;
+            margin-top: 10px;
+            color: #191970;
+        }
+
+        .alternatives-section input,
+        .criteria-section input {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            margin-bottom: 15px;
+            border-radius: 5px;
+            border: 1px solid #191970;
+        }
+
+        .decision-matrix {
+            margin: 20px auto;
+            width: 70%;
+        }
+
+        .decision-matrix th,
+        .decision-matrix td {
+            border: 1px solid #191970;
+            padding: 8px;
+            text-align: center;
+        }
+
+        #electre3-results {
+            margin: 20px auto;
+            width: 50%;
+            border-collapse: collapse;
+        }
+
+        #electre3-results th,
+        #electre3-results td {
+            border: 1px solid #191970;
+            padding: 8px;
+            text-align: center;
+        }
+    </style>
     <title>Decision Support System</title>
 </head>
 <body>
@@ -23,12 +140,7 @@
 
     <h2>Hasil Perhitungan Electre 3</h2>
     <table id="electre3-results">
-        <thead>
-            <tr>
-                <th>Alternatif</th>
-                <th>Nilai Electre 3</th>
-            </tr>
-        </thead>
+        <h3>Alternatif Nilai Electre 3</h3>
         <tbody id="electre3-results-body">
             <!-- Hasil perhitungan Electre 3 akan ditampilkan di sini -->
         </tbody>
@@ -43,7 +155,6 @@
         <input type="number" name="v" id="v" class="form-control" step="0.01">
         <button type="submit">Hitung Electre 3</button>
     </form>
-
     <script>
         let alternativeNumber = 1;
         let criterionNumber = 1;
